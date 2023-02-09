@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import useAppearance from "../../hooks/themes";
+import React, { useContext } from "react";
+import {ThemeContext, useAppearance} from "../../hooks/themes";
 import "./ConfigProvider.css";
 
 export interface ConfigProviderProps {
@@ -8,9 +8,11 @@ export interface ConfigProviderProps {
 }
 
 const ConfigProvider = (props: ConfigProviderProps) => {
-  const [appearance, setAppearance] = useState(
-    useAppearance() || props.appearance
-    );
+  const appearance_default = useAppearance();
+  const appearance = props.appearance || appearance_default;
+  const [theme, setTheme] = useContext(ThemeContext);
+  alert(setTheme);
+  // setTheme(appearance);
   return (
     <div
       className={`configProvider ${appearance}`}
