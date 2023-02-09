@@ -1,10 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react";
-
-import Button from "./Button";
+import ConfigProvider from ".";
 
 describe("Button", () => {
   test("renders the Button component", () => {
-    render(<Button />);
+    render(<ConfigProvider />);
   });
 });

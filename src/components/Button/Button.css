@@ -1,3 +1,5 @@
 button.primary {
-    color: var(--primary);
+    color: var(--on-primary);
+    background: var(--primary);
+    
 }
