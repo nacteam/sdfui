@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useAppearance from "../../hooks/themes";
 import "./ConfigProvider.css";
 
@@ -8,7 +8,9 @@ export interface ConfigProviderProps {
 }
 
 const ConfigProvider = (props: ConfigProviderProps) => {
-  const appearance = props.appearance || useAppearance();
+  const [appearance, setAppearance] = useState(
+    useAppearance() || props.appearance
+    );
   return (
     <div
       className={`configProvider ${appearance}`}
