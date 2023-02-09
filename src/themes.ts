@@ -1,0 +1,3 @@
+const useAppearance = () => {
+    return "light";
+}

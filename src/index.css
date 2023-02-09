@@ -1,0 +1,23 @@
+html {
+    --primary-0: #000000;
+    --primary-10: #1D0161;
+    --primary-20: #322075;
+    --primary-30: #49398D;
+    --primary-40: #6151A6;
+    --primary-50: #7A6AC1;
+    --primary-60: #9584DD;
+    --primary-70: #AF9FFA;
+    --primary-80: #CBBEFF;
+    --primary-90: #E6DEFF;
+    --primary-95: #F4EEFF;
+    --primary-99: #FFFBFF;
+    --primary-100: #FFFFFF;
+}
+
+
+.light {
+    --primary: var(--primary-40);
+    --on-primary: var(--primary-100);
+    --primary-container: var(--primary-90);
+    --on-primary-container: var(--primary-10);
+}

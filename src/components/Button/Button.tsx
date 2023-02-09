@@ -2,16 +2,21 @@ import React from "react";
 import "./Button.css";
 
 export interface ButtonProps {
-    label: string;
-    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  children?: string;
+  mode?: "primary" | "secondary" | "tertiary" | "neutral";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const Button = (props: ButtonProps) => {
-    return (
-        <button onClick={props.onClick}>
-            {props.label}
-        </button>
-    );
+  const appearance = useAppearance();
+  return (
+    <button
+      onClick={props.onClick}
+      className={`${props.mode || "neutral"} ${appearance}`}
+    >
+      {props.children}
+    </button>
+  );
 };
 
 export default Button;
