@@ -4,6 +4,7 @@ import "./Button.css";
 
 export interface ButtonProps {
   children?: any; // FIXME
+  size?: "small" | "medium" | "large";
   mode?: "primary" | "secondary" | "tertiary" | "neutral";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -13,7 +14,7 @@ const Button = (props: ButtonProps) => {
   return (
     <button
       onClick={props.onClick}
-      className={`${props.mode || "neutral"} ${appearance}`}
+      className={`${props.mode || "neutral"} ${props.size || "medium"} ${appearance}`}
     >
       {props.children}
     </button>

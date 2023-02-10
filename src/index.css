@@ -1,5 +1,5 @@
+/* Primaries */
 html {
-    font-family: 'Roboto';
     --primary-0: #000000;
     --primary-10: #1D0161;
     --primary-20: #322075;
@@ -16,9 +16,96 @@ html {
 }
 
 
-.light {
+/* Secondaries */
+html {
+    --secondary-0: #000000;
+    --secondary-10: #001453;
+    --secondary-20: #0F2878;
+    --secondary-30: #2B4090;
+    --secondary-40: #4559A9;
+    --secondary-50: #5E72C4;
+    --secondary-60: #788CE0;
+    --secondary-70: #93A7FD;
+    --secondary-80: #B8C4FF;
+    --secondary-90: #DDE1FF;
+    --secondary-95: #EFEFFF;
+    --secondary-99: #FEFBFF;
+    --secondary-100: #FFFFFF;
+}
+
+
+/* Tertiaries */
+html {
+    --tertiary-0: #000000;
+    --tertiary-10: #30111F;
+    --tertiary-20: #492535;
+    --tertiary-30: #623B4B;
+    --tertiary-40: #7C5263;
+    --tertiary-50: #976A7C;
+    --tertiary-60: #B38396;
+    --tertiary-70: #D09DB0;
+    --tertiary-80: #EDB8CC;
+    --tertiary-90: #FFD9E5;
+    --tertiary-95: #FFECF1;
+    --tertiary-99: #FFFBFF;
+    --tertiary-100: #FFFFFF;
+}
+
+
+/* Neutrals */
+html {
+    --neutral-0: #000000;
+    --neutral-10: #1C1B1E;
+    --neutral-20: #313033;
+    --neutral-30: #48464A;
+    --neutral-40: #605D62;
+    --neutral-50: #79767A;
+    --neutral-60: #939094;
+    --neutral-70: #AEAAAF;
+    --neutral-80: #C9C5CA;
+    --neutral-90: #E6E1E6;
+    --neutral-95: #F4EFF4;
+    --neutral-99: #FFFBFF;
+    --neutral-100: #FFFFFF;
+}
+
+
+html:has(* > .light) {
     --primary: var(--primary-40);
     --on-primary: var(--primary-100);
     --primary-container: var(--primary-90);
     --on-primary-container: var(--primary-10);
+    --secondary: var(--secondary-40);
+    --on-secondary: var(--secondary-100);
+    --secondary-container: var(--secondary-90);
+    --on-secondary-container: var(--secondary-10);
+    --tertiary: var(--tertiary-40);
+    --on-tertiary: var(--tertiary-100);
+    --tertiary-container: var(--tertiary-90);
+    --on-tertiary-container: var(--tertiary-10);
+    --background: var(--neutral-99);
+}
+
+
+html:has(* > .dark) {
+    --primary: var(--primary-80);
+    --on-primary: var(--primary-20);
+    --primary-container: var(--primary-30);
+    --on-primary-container: var(--primary-90);
+    --secondary: var(--secondary-80);
+    --on-secondary: var(--secondary-20);
+    --secondary-container: var(--secondary-30);
+    --on-secondary-container: var(--secondary-90);
+    --tertiary: var(--tertiary-80);
+    --on-tertiary: var(--tertiary-20);
+    --tertiary-container: var(--tertiary-30);
+    --on-tertiary-container: var(--tertiary-90);
+    --background: var(--neutral-10);
+}
+
+
+html {
+    font-family: 'Roboto';
+    font-size: 14pt;
+    background: var(--background);
 }
