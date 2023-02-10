@@ -9,7 +9,7 @@ export interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
-  const appearance = useAppearance();
+  const { appearance, setAppearance } = useAppearance();
   return (
     <button
       onClick={props.onClick}
