@@ -3,7 +3,7 @@ import { useAppearance } from "../../hooks/themes";
 import "./Button.css";
 
 export interface ButtonProps {
-  children?: string;
+  children?: any; // FIXME
   mode?: "primary" | "secondary" | "tertiary" | "neutral";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
