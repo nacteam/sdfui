@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../../core/theme";
-import { useAppearance } from "../../hooks/themes";
+import { getSystemTheme } from "../../core/theme/ThemeContext";
 import "./ConfigProvider.css";
 
 export interface ConfigProviderProps {
@@ -9,17 +9,17 @@ export interface ConfigProviderProps {
 }
 
 const ConfigProvider = (props: ConfigProviderProps) => {
-  const appearance_default = useAppearance();
-  const appearance = props.appearance || appearance_default;
-  const [theme, setTheme] = useState("light");
+  const appearance_default = getSystemTheme();
+  // const appearance = props.appearance || appearance_default;
+  const [appearance, setAppearance] = useState(props.appearance || appearance_default);
   const toggleAppearance = () => {
-    setTheme(
-      theme === "light" ? "dark" : "light"
+    setAppearance(
+      appearance === "light" ? "dark" : "light"
     )
   }
   return (
     <ThemeContext.Provider
-      value = { { theme, setTheme } }
+      value = { { appearance: appearance, setAppearance: toggleAppearance } }
     >
       {props.children}
     </ThemeContext.Provider>

@@ -1,5 +1,5 @@
 import React from "react";
-import {useAppearance} from "../../hooks/themes";
+import { useAppearance } from "../../hooks/themes";
 import "./Button.css";
 
 export interface ButtonProps {
