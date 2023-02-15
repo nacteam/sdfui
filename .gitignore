@@ -1,5 +1,5 @@
 dist
 node_modules
 public
-src/index.tsx
-src/App.tsx
+# src/index.tsx
+# src/App.tsx
