@@ -1,3 +1,9 @@
+div.textFieldBox {
+    border-bottom: 2px solid var(--primary);
+    width: fit-content;
+    height: fit-content;
+}
+
 input[type=text] {
     border-radius: 15px;
     padding: 7px;

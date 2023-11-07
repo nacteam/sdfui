@@ -16,7 +16,7 @@ function App() {
   return (
     <div className={`app ${appearance}`}>
       <TextField
-      placeholder={"Test!"}
+      labelText={"Test!"}
       onChange={ (value: any) => {setTfV(value)} }/>
       <Button
         onClick={() => alert(tfV)}

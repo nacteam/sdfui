@@ -75,14 +75,29 @@ html:has(* > .light) {
     --on-primary: var(--primary-100);
     --primary-container: var(--primary-90);
     --on-primary-container: var(--primary-10);
+    --primary-fixed: var(--primary-90);
+    --primary-fixed-dim: var(--primary-80);
+    --on-primary-fixed: var(--primary-10);
+    --on-primary-fixed-variant: var(--primary-30);
+
     --secondary: var(--secondary-40);
     --on-secondary: var(--secondary-100);
     --secondary-container: var(--secondary-90);
     --on-secondary-container: var(--secondary-10);
+    --secondary-fixed: var(--secondary-90);
+    --secondary-fixed-dim: var(--secondary-80);
+    --on-secondary-fixed: var(--secondary-10);
+    --on-secondary-fixed-variant: var(--secondary-30);
+
     --tertiary: var(--tertiary-40);
     --on-tertiary: var(--tertiary-100);
     --tertiary-container: var(--tertiary-90);
     --on-tertiary-container: var(--tertiary-10);
+    --tertiary-fixed: var(--tertiary-90);
+    --tertiary-fixed-dim: var(--tertiary-80);
+    --on-tertiary-fixed: var(--tertiary-10);
+    --on-tertiary-fixed-variant: var(--tertiary-30);
+
     --background: var(--neutral-99);
 }
 
@@ -92,14 +107,29 @@ html:has(* > .dark) {
     --on-primary: var(--primary-20);
     --primary-container: var(--primary-30);
     --on-primary-container: var(--primary-90);
+    --primary-fixed: var(--primary-90);
+    --primary-fixed-dim: var(--primary-80);
+    --on-primary-fixed: var(--primary-10);
+    --on-primary-fixed-variant: var(--primary-30);
+
     --secondary: var(--secondary-80);
     --on-secondary: var(--secondary-20);
     --secondary-container: var(--secondary-30);
     --on-secondary-container: var(--secondary-90);
+    --secondary-fixed: var(--secondary-90);
+    --secondary-fixed-dim: var(--secondary-80);
+    --on-secondary-fixed: var(--secondary-10);
+    --on-secondary-fixed-variant: var(--secondary-30);
+
     --tertiary: var(--tertiary-80);
     --on-tertiary: var(--tertiary-20);
     --tertiary-container: var(--tertiary-30);
     --on-tertiary-container: var(--tertiary-90);
+    --tertiary-fixed: var(--tertiary-90);
+    --tertiary-fixed-dim: var(--tertiary-80);
+    --on-tertiary-fixed: var(--tertiary-10);
+    --on-tertiary-fixed-variant: var(--tertiary-30);
+    
     --background: var(--neutral-10);
 }
 
