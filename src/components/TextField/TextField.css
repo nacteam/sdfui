@@ -1,5 +1,5 @@
 div.textFieldBox {
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--outline);
     width: fit-content;
     height: fit-content;
 }
