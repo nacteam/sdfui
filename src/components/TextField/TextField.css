@@ -1,5 +1,17 @@
 div.textFieldBox {
-    border-bottom: 2px solid var(--outline);
+    border-bottom: 1px solid var(--outline);
+    width: fit-content;
+    height: fit-content;
+}
+
+div.textFieldBox:focus-within {
+    border-bottom: 3px solid var(--primary);
+    width: fit-content;
+    height: fit-content;
+}
+
+div.textFieldBox.outlined {
+    border: 2px solid var(--outline);
     width: fit-content;
     height: fit-content;
 }
@@ -7,4 +19,14 @@ div.textFieldBox {
 input[type=text] {
     border-radius: 15px;
     padding: 7px;
+    background: none;
+    outline: none;
+    border: 0;
+    appearance: none;
+    color: var(--on-surface-variant);
 }
+
+::placeholder {
+    color: var(--on-surface-variant);
+    opacity: 1; /* Firefox */
+  }

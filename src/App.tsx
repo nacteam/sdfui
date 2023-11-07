@@ -16,6 +16,7 @@ function App() {
   return (
     <div className={`app ${appearance}`}>
       <TextField
+      mode="filled"
       labelText={"Test!"}
       onChange={ (value: any) => {setTfV(value)} }/>
       <Button

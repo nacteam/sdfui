@@ -18,7 +18,7 @@ const TextField = (props: TextFieldProps) => {
   const [value, setValue] = useState('');
   return (
     <div
-      className={ "textFieldBox" }
+      className={ `textFieldBox ${props.mode || "filled"}` }
     >
       {props.leadingIcon ? props.leadingIcon : null}
       <input
