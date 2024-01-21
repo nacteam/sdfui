@@ -5,6 +5,8 @@ import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import scss from "rollup-plugin-scss";
+import sass from "sass";
 
 import packageJson from "./package.json" assert { type: "json" };
 
@@ -28,8 +30,13 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      postcss(),
-      terser()
+      postcss({
+        minimize: true,
+        modules: true,
+        use: ["scss"],
+      }),
+      terser(),
+      // scss({ output: "dist/index.css", failOnError: true, runtime: sass })
     ],
   },
   {

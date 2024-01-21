@@ -1,5 +1,6 @@
 dist
 node_modules
 public
+nacteam-sdfui-*.tgz
 # src/index.tsx
 # src/App.tsx

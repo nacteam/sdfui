@@ -1,6 +1,6 @@
 {
   "name": "@nacteam/sdfui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Superdef social network UI components",
   "type": "module",
   "scripts": {
@@ -34,7 +34,9 @@
     "rollup-plugin-dts": "^4.0.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-scss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.70.0",
     "tslib": "^2.5.0",
     "typescript": "^4.4.4"
   },

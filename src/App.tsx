@@ -20,10 +20,30 @@ function App() {
       labelText={"Test!"}
       onChange={ (value: any) => {setTfV(value)} }/>
       <Button
-        onClick={() => alert(tfV)}
-        mode={"primary"}
+        onClick={toggleAppearance}
+        style={"filled"}
       >
-        Change theme!
+        Change theme! (filled)
+      </Button>
+      <Button
+        onClick={toggleAppearance}
+        style={"filled"}
+        disabled={true}
+      >
+        Change theme! (filled, disabled)
+      </Button>
+      <Button
+        onClick={() => alert(tfV)}
+        style={"outlined"}
+        disabled={true}
+      >
+        Change theme! (outlined, disabled)
+      </Button>
+      <Button
+        onClick={() => alert(tfV)}
+        style={"outlined"}
+      >
+        Change theme! (outlined)
       </Button>
     </div>
   );

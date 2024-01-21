@@ -1,0 +1,86 @@
+button {
+    appearance: button;
+    -webkit-appearance: button;
+    border: none;
+    outline: none;
+    background: none;
+    transition: box-shadow 300ms, background 300ms;
+    box-sizing: content-box;
+    overflow: clip;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    border-radius: 100px;
+}
+button > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px 10px 16px;
+    width: inherit;
+}
+button:enabled {
+    cursor: pointer;
+}
+button:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: var(--on-surface);
+}
+
+/* Theming (see issue https://github.com/nacteam/sdfui/issues/2) */
+/* button.primary {
+    color: var(--on-primary);
+    background: var(--primary);
+}
+button.secondary {
+    color: var(--on-secondary);
+    background: var(--secondary);
+}
+button.tertiary {
+    color: var(--on-tertiary);
+    background: var(--tertiary);
+} */
+
+// @mixin background-opacity($color, $opacity: 0.3) {
+//     background: #{$color}; /* The Fallback */
+//     background: rgba(#{$color}, $opacity);
+// }
+
+
+/* Styles */
+button.elevated {
+    background: var(--surface-container-low);
+    color: var(--primary);
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 3px;
+}
+button.filled {
+    background: var(--primary);
+    color: var(--on-primary);
+}
+button.filled:disabled {
+    // @include background-opacity(var(--on-surface), 12%);
+    background-color: transparentize(#{var(--on-surface)}, .3);
+    /* background: linear-gradient(90deg, var(--on-surface) 12%, var(--on-surface) 12%); */
+    color: var(--on-surface);
+    // color: rgb(var(--on-surface-r), var(--on-surface-g), var(--on-surface-b), 0.5);
+}
+button.filled-tonal {
+    background: var(--secondary-container);
+    color: var(--on-secondary-container);
+}
+button.outlined {
+    border: 1px solid var(--outline);
+    color: var(--primary);
+}
+button.outlined:disabled {
+    border: 1px solid var(--on-surface);
+    opacity: 0.12;
+}
+button.text {
+
+}
