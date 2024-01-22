@@ -33,6 +33,12 @@ function App() {
         Change theme! (filled, disabled)
       </Button>
       <Button
+        onClick={toggleAppearance}
+        style={"filled-tonal"}
+      >
+        Change theme! (tonal)
+      </Button>
+      <Button
         onClick={() => alert(tfV)}
         style={"outlined"}
         disabled={true}

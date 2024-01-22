@@ -1,3 +1,4 @@
+@import '../../index.scss';
 button {
     appearance: button;
     -webkit-appearance: button;
@@ -27,7 +28,7 @@ button:enabled {
 button:disabled {
     cursor: not-allowed;
     pointer-events: none;
-    color: var(--on-surface);
+    // color: color-mix(in srgb, var(--on-surface) 12%, transparent);
 }
 
 /* Theming (see issue https://github.com/nacteam/sdfui/issues/2) */
@@ -36,12 +37,12 @@ button:disabled {
     background: var(--primary);
 }
 button.secondary {
-    color: var(--on-secondary);
-    background: var(--secondary);
+    color: $on-secondary;
+    background: $secondary;
 }
 button.tertiary {
-    color: var(--on-tertiary);
-    background: var(--tertiary);
+    color: $on-tertiary;
+    background: $tertiary;
 } */
 
 // @mixin background-opacity($color, $opacity: 0.3) {
@@ -63,11 +64,12 @@ button.filled {
     color: var(--on-primary);
 }
 button.filled:disabled {
-    // @include background-opacity(var(--on-surface), 12%);
-    background-color: transparentize(#{var(--on-surface)}, .3);
-    /* background: linear-gradient(90deg, var(--on-surface) 12%, var(--on-surface) 12%); */
+    // @include background-opacity($on-surface, 12%);
+    background-color: color-mix(in srgb, var(--on-surface) 12%, transparent);
+    /* background: linear-gradient(90deg, $on-surface 12%, $on-surface 12%); */
     color: var(--on-surface);
-    // color: rgb(var(--on-surface-r), var(--on-surface-g), var(--on-surface-b), 0.5);
+    // color: red;
+    // color: rgb($on-surface-r, $on-surface-g, $on-surface-b, 0.5);
 }
 button.filled-tonal {
     background: var(--secondary-container);
@@ -78,7 +80,8 @@ button.outlined {
     color: var(--primary);
 }
 button.outlined:disabled {
-    border: 1px solid var(--on-surface);
+    border: 1px solid color-mix(in srgb, var(--on-surface) 12%, transparent);
+    color: var(--on-surface);
     opacity: 0.12;
 }
 button.text {
