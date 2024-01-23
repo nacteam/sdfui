@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAppearance } from "../../hooks/themes";
-import "./TextField.css";
+import "./TextField.scss";
 
 export interface TextFieldProps { // тут тайпинг для нашего класса. Пусть пока будет только один - placeholder.
   labelText?: string; // FIXME
