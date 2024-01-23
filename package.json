@@ -1,7 +1,7 @@
 {
   "name": "@nacteam/sdfui",
   "version": "0.0.4",
-  "description": "Superdef social network UI components",
+  "description": "Superdef UI kit for React based on Material Design 3",
   "type": "module",
   "scripts": {
     "rollup": "rollup -c",
