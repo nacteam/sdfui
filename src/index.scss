@@ -1,0 +1,300 @@
+/* Generated automatically by material-theme-translator-figma (https://github.com/difhel/material-theme-translator-figma)
+Author: Mark Fomin aka @difhel (email material-theme-translator-figma@difhel.dev)
+2023
+* /
+
+/* Primary colors */
+html {
+    --primary-0: #000000;
+    --primary-4: #0f003d;
+    --primary-5: #120045;
+    --primary-6: #14004b;
+    --primary-10: #1d0161;
+    --primary-12: #210764;
+    --primary-17: #2c186e;
+    --primary-20: #322075;
+    --primary-22: #372579;
+    --primary-24: #3b2a7e;
+    --primary-25: #3e2c80;
+    --primary-30: #49398d;
+    --primary-35: #554599;
+    --primary-40: #6151a6;
+    --primary-50: #7a6ac1;
+    --primary-60: #9584dd;
+    --primary-70: #af9ffa;
+    --primary-80: #cbbeff;
+    --primary-87: #ded4ff;
+    --primary-90: #e6deff;
+    --primary-92: #ece4ff;
+    --primary-94: #f2ebff;
+    --primary-95: #f4eeff;
+    --primary-96: #f7f1ff;
+    --primary-98: #fdf8ff;
+    --primary-99: #fffbff;
+    --primary-100: #ffffff;
+}
+
+/* Secondary colors */
+html {
+    --secondary-0: #000000;
+    --secondary-4: #000934;
+    --secondary-5: #000b3a;
+    --secondary-6: #000d40;
+    --secondary-10: #001453;
+    --secondary-12: #00175d;
+    --secondary-17: #032172;
+    --secondary-20: #0f2878;
+    --secondary-22: #152d7d;
+    --secondary-24: #1b3281;
+    --secondary-25: #1e3484;
+    --secondary-30: #2b4090;
+    --secondary-35: #384d9c;
+    --secondary-40: #4559a9;
+    --secondary-50: #5e72c4;
+    --secondary-60: #788ce0;
+    --secondary-70: #93a7fd;
+    --secondary-80: #b8c4ff;
+    --secondary-87: #d2d8ff;
+    --secondary-90: #dde1ff;
+    --secondary-92: #e4e7ff;
+    --secondary-94: #ececff;
+    --secondary-95: #efefff;
+    --secondary-96: #f3f2ff;
+    --secondary-98: #fbf8ff;
+    --secondary-99: #fefbff;
+    --secondary-100: #ffffff;
+}
+
+/* Tertiary colors */
+html {
+    --tertiary-0: #000000;
+    --tertiary-4: #250013;
+    --tertiary-5: #2a0017;
+    --tertiary-6: #2e0019;
+    --tertiary-10: #3d0023;
+    --tertiary-12: #450028;
+    --tertiary-17: #540833;
+    --tertiary-20: #5c113a;
+    --tertiary-22: #62163e;
+    --tertiary-24: #681b43;
+    --tertiary-25: #6b1d45;
+    --tertiary-30: #792951;
+    --tertiary-35: #87355d;
+    --tertiary-40: #964169;
+    --tertiary-50: #b45983;
+    --tertiary-60: #d2729d;
+    --tertiary-70: #f18cb8;
+    --tertiary-80: #ffb0cf;
+    --tertiary-87: #ffcddf;
+    --tertiary-90: #ffd8e5;
+    --tertiary-92: #ffe0ea;
+    --tertiary-94: #ffe8ef;
+    --tertiary-95: #ffecf1;
+    --tertiary-96: #fff0f3;
+    --tertiary-98: #fff8f8;
+    --tertiary-99: #fffbff;
+    --tertiary-100: #ffffff;
+}
+
+/* Neutral colors */
+html {
+    --neutral-0: #000000;
+    --neutral-4: #0f0e11;
+    --neutral-5: #111014;
+    --neutral-6: #141316;
+    --neutral-10: #1c1b1e;
+    --neutral-12: #201f23;
+    --neutral-17: #2b292d;
+    --neutral-20: #313033;
+    --neutral-22: #363438;
+    --neutral-24: #3a383c;
+    --neutral-25: #3c3b3f;
+    --neutral-30: #48464a;
+    --neutral-35: #545256;
+    --neutral-40: #605d62;
+    --neutral-50: #79767a;
+    --neutral-60: #939094;
+    --neutral-70: #aeaaaf;
+    --neutral-80: #c9c5ca;
+    --neutral-87: #ddd9dd;
+    --neutral-90: #e6e1e6;
+    --neutral-92: #ebe7ec;
+    --neutral-94: #f1ecf1;
+    --neutral-95: #f4eff4;
+    --neutral-96: #f7f2f7;
+    --neutral-98: #fdf8fd;
+    --neutral-99: #fffbff;
+    --neutral-100: #ffffff;
+}
+
+/* Neutral-variant colors */
+html {
+    --neutral-variant-0: #000000;
+    --neutral-variant-4: #0f0d15;
+    --neutral-variant-5: #111017;
+    --neutral-variant-6: #14121a;
+    --neutral-variant-10: #1c1a22;
+    --neutral-variant-12: #201e27;
+    --neutral-variant-17: #2b2931;
+    --neutral-variant-20: #312f38;
+    --neutral-variant-22: #36333c;
+    --neutral-variant-24: #3a3841;
+    --neutral-variant-25: #3c3a43;
+    --neutral-variant-30: #48454e;
+    --neutral-variant-35: #54515a;
+    --neutral-variant-40: #605d66;
+    --neutral-variant-50: #79757f;
+    --neutral-variant-60: #938f99;
+    --neutral-variant-70: #aea9b4;
+    --neutral-variant-80: #c9c4d0;
+    --neutral-variant-87: #ddd8e3;
+    --neutral-variant-90: #e6e0ec;
+    --neutral-variant-92: #ece6f1;
+    --neutral-variant-94: #f1ecf7;
+    --neutral-variant-95: #f4effa;
+    --neutral-variant-96: #f7f1fd;
+    --neutral-variant-98: #fdf8ff;
+    --neutral-variant-99: #fffbff;
+    --neutral-variant-100: #ffffff;
+}
+
+/* Error colors */
+html {
+    --error-0: #000000;
+    --error-4: #280001;
+    --error-5: #2d0001;
+    --error-6: #310001;
+    --error-10: #410002;
+    --error-12: #490002;
+    --error-17: #5c0004;
+    --error-20: #690005;
+    --error-22: #710005;
+    --error-24: #790006;
+    --error-25: #7e0007;
+    --error-30: #93000a;
+    --error-35: #a80710;
+    --error-40: #ba1a1a;
+    --error-50: #de3730;
+    --error-60: #ff5449;
+    --error-70: #ff897d;
+    --error-80: #ffb4ab;
+    --error-87: #ffcfc9;
+    --error-90: #ffdad6;
+    --error-92: #ffe2de;
+    --error-94: #ffe9e6;
+    --error-95: #ffedea;
+    --error-96: #fff0ee;
+    --error-98: #fff8f7;
+    --error-99: #fffbff;
+    --error-100: #ffffff;
+}
+
+html:has(* > .light) {
+    --inverse-primary: #cbbeff;
+    --surface-variant: #e6e0ec;
+    --surface-container: #f1ecf1;
+    --inverse-on-surface: #f4eff4;
+    --on-surface-variant: #48454e;
+    --inverse-surface: #313033;
+    --surface-container-highest: #e6e1e6;
+    --scrim: #000000;
+    --shadow: #000000;
+    --surface-container-low: #f7f2f7;
+    --primary: #6151a6;
+    --on-primary: #ffffff;
+    --primary-container: #e6deff;
+    --on-primary-container: #1d0161;
+    --primary-fixed: #e6deff;
+    --on-primary-fixed: #1d0161;
+    --primary-fixed-dim: #cbbeff;
+    --on-primary-fixed-variant: #49398d;
+    --secondary: #4559a9;
+    --on-secondary: #ffffff;
+    --on-secondary-container: #001453;
+    --secondary-fixed: #dde1ff;
+    --on-secondary-fixed: #001453;
+    --secondary-fixed-dim: #b8c4ff;
+    --on-secondary-fixed-variant: #2b4090;
+    --tertiary: #964169;
+    --on-tertiary: #ffffff;
+    --tertiary-container: #ffd8e5;
+    --on-tertiary-container: #3d0023;
+    --on-error: #ffffff;
+    --on-tertiary-fixed: #3d0023;
+    --on-background: #1c1b1e;
+    --tertiary-fixed-dim: #ffb0cf;
+    --surface: #fdf8fd;
+    --surface-tint: #6151a6;
+    --surface-dim: #ddd9dd;
+    --surface-container-high: #ebe7ec;
+    --surface-container-lowest: #ffffff;
+    --surface-bright: #fdf8fd;
+    --on-surface: #1c1b1e;
+    --outline-variant: #c9c4d0;
+    --on-tertiary-fixed-variant: #792951;
+    --tertiary-fixed: #ffd8e5;
+    --error: #ba1a1a;
+    --outline: #79757f;
+    --on-error-container: #410002;
+    --error-container: #ffdad6;
+    --secondary-container: #dde1ff;
+    --background: #fffbff;
+}
+
+html:has(* > .dark) {
+    --outline-variant: #48454e;
+    --secondary-fixed: #dde1ff;
+    --on-surface: #c9c5ca;
+    --primary-container: #49398d;
+    --on-primary-container: #e6deff;
+    --primary-fixed: #e6deff;
+    --on-primary-fixed: #1d0161;
+    --primary-fixed-dim: #cbbeff;
+    --on-primary-fixed-variant: #49398d;
+    --on-secondary: #0f2878;
+    --secondary-container: #2b4090;
+    --on-secondary-fixed: #001453;
+    --secondary-fixed-dim: #b8c4ff;
+    --tertiary: #ffb0cf;
+    --on-tertiary: #5c113a;
+    --tertiary-container: #792951;
+    --on-tertiary-fixed: #3d0023;
+    --on-tertiary-fixed-variant: #792951;
+    --error: #ffb4ab;
+    --on-error: #690005;
+    --error-container: #93000a;
+    --outline: #938f99;
+    --background: #1c1b1e;
+    --on-background: #e6e1e6;
+    --surface: #141316;
+    --surface-variant: #48454e;
+    --on-surface-variant: #c9c4d0;
+    --inverse-surface: #e6e1e6;
+    --inverse-on-surface: #1c1b1e;
+    --inverse-primary: #6151a6;
+    --surface-tint: #cbbeff;
+    --scrim: #000000;
+    --surface-container-highest: #363438;
+    --surface-container-high: #2b292d;
+    --surface-container: #201f23;
+    --primary: #cbbeff;
+    --surface-bright: #3a383c;
+    --surface-container-lowest: #0f0e11;
+    --surface-dim: #141316;
+    --on-secondary-container: #dde1ff;
+    --on-tertiary-container: #ffd8e5;
+    --shadow: #000000;
+    --surface-container-low: #1c1b1e;
+    --tertiary-fixed-dim: #ffb0cf;
+    --on-error-container: #ffdad6;
+    --secondary: #b8c4ff;
+    --tertiary-fixed: #ffd8e5;
+    --on-primary: #322075;
+    --on-secondary-fixed-variant: #2b4090;
+}
+
+html {
+    font-family: 'Google Sans', 'Product Sans', 'Roboto';
+    font-size: 14pt;
+    background: var(--surface);
+}
