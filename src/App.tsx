@@ -51,6 +51,13 @@ function App() {
       >
         Change theme! (outlined)
       </Button>
+      <br/>
+      <Button
+        onClick={() => alert(tfV)}
+        style={"elevated"}
+      >
+        Change theme! (outlined)
+      </Button>
     </div>
   );
 }
