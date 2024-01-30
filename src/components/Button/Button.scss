@@ -27,28 +27,9 @@ button:enabled {
 }
 button:disabled {
     cursor: not-allowed;
-    pointer-events: none;
+    pointer-events: all !important;
     // color: color-mix(in srgb, var(--on-surface) 12%, transparent);
 }
-
-/* Theming (see issue https://github.com/nacteam/sdfui/issues/2) */
-/* button.primary {
-    color: var(--on-primary);
-    background: var(--primary);
-}
-button.secondary {
-    color: $on-secondary;
-    background: $secondary;
-}
-button.tertiary {
-    color: $on-tertiary;
-    background: $tertiary;
-} */
-
-// @mixin background-opacity($color, $opacity: 0.3) {
-//     background: #{$color}; /* The Fallback */
-//     background: rgba(#{$color}, $opacity);
-// }
 
 
 /* Styles */
@@ -58,6 +39,8 @@ button.elevated {
     margin-left: 2px;
     margin-right: 2px;
     margin-bottom: 3px;
+    height: 40px;
+    box-shadow: var(--elevation-1);
 }
 button.filled {
     background: var(--primary);
