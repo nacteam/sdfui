@@ -1,6 +1,7 @@
 import React from "react";
 import { useAppearance } from "../../hooks/themes";
 import classes from "./Button.module.scss";
+import Icon from "../Icon";
 
 export interface ButtonProps {
   children?: any; // FIXME
@@ -9,6 +10,7 @@ export interface ButtonProps {
   // color?: "primary" | "secondary" | "tertiary" | "neutral";
   disabled?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  icon?: Icon;
 }
 
 const Button = (props: ButtonProps) => {
@@ -20,17 +22,18 @@ const Button = (props: ButtonProps) => {
     outlined: classes.outlined,
     text: classes.text,
     container: classes.container,
-    "label-text": classes.labelText,
+    "label-text": classes.labelText
   }
   console.log("Redering button", props.style, styleClassNames);
   return (
     <button
       onClick={props.onClick}
-      className={`${styleClassNames[props.style || "filled"]} ${appearance}`}
+      className={`${styleClassNames[props.style || "filled"]} ${appearance} ${props.icon ? classes.icon : ""}`}
       disabled={props.disabled}
     >
       <div className={classes.container}>
         {/* place for Icon # todo  */}
+        {props.icon}
         <div className={classes.labelText}>
           {props.children}
         </div>
