@@ -1,0 +1,71 @@
+button {
+    appearance: button;
+    -webkit-appearance: button;
+    border: none;
+    outline: none;
+    background: none;
+    transition: box-shadow 300ms, background 300ms;
+    box-sizing: content-box;
+    overflow: clip;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    border-radius: 100px;
+}
+button > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px 10px 16px;
+    width: inherit;
+}
+button:enabled {
+    cursor: pointer;
+}
+button:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+    // color: color-mix(in srgb, var(--on-surface) 12%, transparent);
+}
+
+
+/* Styles */
+button.elevated {
+    background: var(--surface-container-low);
+    color: var(--primary);
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 3px;
+    height: 40px;
+    box-shadow: var(--elevation-1);
+}
+button.filled {
+    background: var(--primary);
+    color: var(--on-primary);
+}
+button.filled:disabled {
+    // @include background-opacity($on-surface, 12%);
+    background-color: color-mix(in srgb, var(--on-surface) 12%, transparent);
+    /* background: linear-gradient(90deg, $on-surface 12%, $on-surface 12%); */
+    color: var(--on-surface);
+    // color: red;
+    // color: rgb($on-surface-r, $on-surface-g, $on-surface-b, 0.5);
+}
+button.filled-tonal {
+    background: var(--secondary-container);
+    color: var(--on-secondary-container);
+}
+button.outlined {
+    border: 1px solid var(--outline);
+    color: var(--primary);
+}
+button.outlined:disabled {
+    border: 1px solid color-mix(in srgb, var(--on-surface) 12%, transparent);
+    color: var(--on-surface);
+    opacity: 0.12;
+}
+button.text {
+
+}
