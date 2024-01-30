@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppearance } from "../../hooks/themes";
-import "./Button.scss";
+import classes from "./Button.module.scss";
 
 export interface ButtonProps {
   children?: any; // FIXME
@@ -13,15 +13,25 @@ export interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
   const { appearance, setAppearance } = useAppearance();
+  const styleClassNames = {
+    elevated: classes.elevated,
+    filled: classes.filled,
+    "filled-tonal": classes.filledTonal,
+    outlined: classes.outlined,
+    text: classes.text,
+    container: classes.container,
+    "label-text": classes.labelText,
+  }
+  console.log("Redering button", props.style, styleClassNames);
   return (
     <button
       onClick={props.onClick}
-      className={`${props.style || "neutral"} ${appearance}`}
+      className={`${styleClassNames[props.style || "filled"]} ${appearance}`}
       disabled={props.disabled}
     >
-      <div className={"container"}>
+      <div className={classes.container}>
         {/* place for Icon # todo  */}
-        <div className="label_text">
+        <div className={classes.labelText}>
           {props.children}
         </div>
       </div>

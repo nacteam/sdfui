@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "plugins": [{
+      "name": "typescript-plugin-css-modules",
+      "options": {
+        "classnameTransform": "dashes",
+        "customMatcher": ".+\\.scss$",
+      }
+    }],
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */
@@ -115,5 +122,5 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"]
 }
