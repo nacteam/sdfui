@@ -34,6 +34,7 @@ function App() {
         variant={"filled"}
       >
         Change theme! (filled)
+        <Ripple />
       </Button>
       <Button
         onClick={toggleAppearance}

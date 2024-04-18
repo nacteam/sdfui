@@ -1,9 +1,13 @@
 import React from "react";
 import { useAppearance } from "../../hooks/themes";
 import classes from "./Button.module.scss";
+import Ripple from "../Ripple";
 
 export interface ButtonProps extends Omit<
-  React.HTMLAttributes<HTMLButtonElement>,
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >,
   "variant"
 > {
   variant?: "elevated" | "filled" | "filled-tonal" | "outlined" | "text";
@@ -36,6 +40,7 @@ const Button = (props: ButtonProps) => {
           { props.children }
         </div>
       </div>
+      <Ripple />
     </button>
   );
 };
