@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Icon } from "./components";
+import { Button, Icon, Ripple } from "./components";
 import TextField from "./components/TextField";
 // import { Button, ConfigProvider } from ;
 import { ThemeContext } from "./core/theme";
@@ -31,8 +31,6 @@ function App() {
         labelText={"Test!"}
         onChange={(value: any) => { setTfV(value) }} />
       <Button
-        onClick={toggleAppearance}
-        icon={testIcon}
         style={"filled"}
       >
         Change theme! (filled)

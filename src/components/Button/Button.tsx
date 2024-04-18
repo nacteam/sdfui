@@ -10,7 +10,7 @@ export interface ButtonProps {
   // color?: "primary" | "secondary" | "tertiary" | "neutral";
   disabled?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  icon?: Icon;
+  icon?: React.ReactNode;
 }
 
 const Button = (props: ButtonProps) => {
@@ -24,7 +24,7 @@ const Button = (props: ButtonProps) => {
     container: classes.container,
     "label-text": classes.labelText
   }
-  console.log("Redering button", props.style, styleClassNames);
+  // console.log("Redering button", props.style, styleClassNames);
   return (
     <button
       onClick={props.onClick}
