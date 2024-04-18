@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useState } from "react";
 import classes from "./Ripple.module.scss";
 
 // const useDebouncedRippleCleanUp = (
@@ -74,7 +74,6 @@ const Ripple = () => {
           return (
             <span
               key={"ripple" + index}
-              about="t"
               style={{
                 top: ripple.y,
                 left: ripple.x,
