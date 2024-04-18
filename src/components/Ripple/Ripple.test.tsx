@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Button from "./Ripple";
+import Ripple from "./Ripple";
 
-describe("Button", () => {
-  test("renders the Button component", () => {
-    render(<Button />);
+describe("Ripple", () => {
+  test("renders the Ripple component", () => {
+    render(<Ripple />);
   });
 });
