@@ -68,7 +68,7 @@ const Ripple = () => {
           return (
             <span
               key={"ripple" + index}
-              style={{
+              variant={{
                 top: ripple.y,
                 left: ripple.x,
                 width: ripple.size,

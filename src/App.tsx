@@ -31,40 +31,40 @@ function App() {
         labelText={"Test!"}
         onChange={(value: any) => { setTfV(value) }} />
       <Button
-        style={"filled"}
+        variant={"filled"}
       >
         Change theme! (filled)
       </Button>
       <Button
         onClick={toggleAppearance}
-        style={"filled"}
+        variant={"filled"}
         disabled={true}
       >
         Change theme! (filled, disabled)
       </Button>
       <Button
         onClick={toggleAppearance}
-        style={"filled-tonal"}
+        variant={"filled-tonal"}
       >
         Change theme! (tonal)
       </Button>
       <Button
         onClick={() => alert(tfV)}
-        style={"outlined"}
+        variant={"outlined"}
         disabled={true}
       >
         Change theme! (outlined, disabled)
       </Button>
       <Button
         onClick={() => alert(tfV)}
-        style={"outlined"}
+        variant={"outlined"}
       >
         Change theme! (outlined)
       </Button>
       <br />
       <Button
         onClick={() => alert(tfV)}
-        style={"elevated"}
+        variant={"elevated"}
       >
         Change theme! (outlined)
       </Button>
