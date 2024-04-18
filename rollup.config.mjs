@@ -3,7 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
-import { terser } from "rollup-plugin-terser";
+import terser from "@rollup/plugin-terser";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import scss from "rollup-plugin-scss";
 import sass from "sass";
@@ -32,17 +32,20 @@ export default [
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
         minimize: true,
-        modules: true,
-        use: ["scss"],
+        modules: {
+          localsConvention: "camelCaseOnly",
+        }
+        
+        // use: ["scss"],
       }),
       terser(),
-      // scss({ output: "dist/index.css", failOnError: true, runtime: sass })
+      // scss({ output: "dist/index.css", failOnError: true, runtime: scss })
     ],
   },
   {
-    input: "dist/esm/index.d.ts",
+    input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
-    external: [/\.css$/],
+    external: [/\.(css|less|scss)$/],
   },
 ];

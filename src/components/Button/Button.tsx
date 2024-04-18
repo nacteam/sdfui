@@ -1,30 +1,46 @@
 import React from "react";
 import { useAppearance } from "../../hooks/themes";
-import "./Button.scss";
+import classes from "./Button.module.scss";
+import Ripple from "../Ripple";
 
-export interface ButtonProps {
-  children?: any; // FIXME
-  style?: "elevated" | "filled" | "filled-tonal" | "outlined" | "text";
-  // TODO: resolve issue https://github.com/nacteam/sdfui/issues/2
-  // color?: "primary" | "secondary" | "tertiary" | "neutral";
-  disabled?: boolean;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+export interface ButtonProps extends Omit<
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >,
+  "variant"
+> {
+  variant?: "elevated" | "filled" | "filled-tonal" | "outlined" | "text";
+  icon?: React.ReactNode;
 }
 
 const Button = (props: ButtonProps) => {
-  const { appearance, setAppearance } = useAppearance();
+  const { appearance } = useAppearance();
+  const styleClassNames = {
+    elevated: classes.elevated,
+    filled: classes.filled,
+    "filled-tonal": classes.filledTonal,
+    outlined: classes.outlined,
+    text: classes.text,
+    container: classes.container,
+    "label-text": classes.labelText
+  }
+
+  const { variant, icon, ...restProps } = props;
+
   return (
     <button
       onClick={props.onClick}
-      className={`${props.style || "neutral"} ${appearance}`}
-      disabled={props.disabled}
+      className={`${styleClassNames[variant || "filled"]} ${appearance} ${icon ? classes.icon : ""}`}
+      {...restProps}
     >
-      <div className={"container"}>
-        {/* place for Icon # todo  */}
-        <div className="label_text">
-          {props.children}
+      <div className={classes.container}>
+        { icon }
+        <div className={classes.labelText}>
+          { props.children }
         </div>
       </div>
+      <Ripple />
     </button>
   );
 };

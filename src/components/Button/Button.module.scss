@@ -11,6 +11,7 @@ button {
     margin: 0;
     padding: 0;
     user-select: none;
+    height: 40px;
     border-radius: 100px;
 }
 button > .container {
@@ -18,8 +19,14 @@ button > .container {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px 24px 10px 16px;
+    padding: 10px 24px;
     width: inherit;
+}
+button.icon > .container {
+    padding: 10px 24px 10px 16px;
+}
+button.icon > .container > svg {
+    margin-right: 8px;
 }
 button:enabled {
     cursor: pointer;
@@ -66,6 +73,7 @@ button.outlined:disabled {
     color: var(--on-surface);
     opacity: 0.12;
 }
-button.text {
-
-}
+// button > .container > .label-text {
+//     line-height: 20pt;
+//     font-size: 14pt;
+// }

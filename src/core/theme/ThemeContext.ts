@@ -18,5 +18,6 @@ const getSystemTheme = () => useThemeDetector() ? "dark" : "light";
 const ThemeContext = createContext({} as any);
 export {
     getSystemTheme, 
-    ThemeContext
+    ThemeContext,
+    useThemeDetector
 }
