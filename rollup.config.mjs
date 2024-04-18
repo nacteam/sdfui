@@ -31,8 +31,11 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
-        modules: true,
-        minimize: true
+        minimize: true,
+        modules: {
+          localsConvention: "camelCaseOnly",
+        }
+        
         // use: ["scss"],
       }),
       terser(),
