@@ -4,6 +4,7 @@ import TextField from "./components/TextField";
 // import { Button, ConfigProvider } from ;
 import { ThemeContext } from "./core/theme";
 import { useAppearance } from "./hooks/themes";
+import { useMediaScreenSize } from "./hooks/media";
 
 function App() {
   const { appearance, setAppearance } = useAppearance();
@@ -24,8 +25,17 @@ function App() {
         </g>
       </g>
   </Icon>;
+
+  let screenSize = useMediaScreenSize();
   return (
     <div className={`app ${appearance}`}>
+      <span>
+        Is XS: {screenSize.isXs.toString()} <br />
+        Is SM: {screenSize.isSm.toString()} <br />
+        Is MD: {screenSize.isMd.toString()} <br />
+        Is LG: {screenSize.isLg.toString()} <br />
+        Is XL: {screenSize.isXl.toString()} <br />
+      </span>
       <TextField
         mode="filled"
         labelText={"Test!"}
