@@ -9,9 +9,6 @@
     "dev": "vite",
     "lint": "eslint . --ext .ts,.tsx"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/nacteam"
-  },
   "author": "Mark Fomin",
   "license": "CC BY-NC-SA 4.0",
   "devDependencies": {
