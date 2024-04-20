@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Icon, Ripple } from "./components";
+import { Button, Icon, Ripple, Stack } from "./components";
 import TextField from "./components/TextField";
 // import { Button, ConfigProvider } from ;
 import { ThemeContext } from "./core/theme";
@@ -8,7 +8,7 @@ import { useAdaptiveValue, useMediaScreenSize } from "./hooks/media";
 
 function App() {
   const { appearance, setAppearance } = useAppearance();
-  console.log(appearance);
+  // console.log(appearance);
   const toggleAppearance = () => {
     console.log(appearance);
     setAppearance(appearance === "light" ? "dark" : "light");
@@ -32,6 +32,15 @@ function App() {
   const value = useAdaptiveValue(aValue, "default");
   return (
     <div className={`app ${appearance}`}>
+      <Stack divider={
+        <div style={{ height: 1, width: "100%", backgroundColor: "#000" }} />
+      } direction={{ xs: "column", md: "row" }} spacing={{ xs: 2, md: 4 }}>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+      </Stack>
       <span>
         Is XS: {screenSize.isXs.toString()} <br />
         Is SM: {screenSize.isSm.toString()} <br />
