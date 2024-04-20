@@ -41,7 +41,7 @@ export const useMediaScreenSize = () => {
     return { isXs, isSm, isMd, isLg, isXl };
 }
 
-const isAdaptiveValue = <T>(
+export const isAdaptiveValue = <T>(
     value: AdaptiveValue<T>
 ): value is Exclude<typeof value, T> => {
     let valueUpcast = value as Exclude<typeof value, T>;
