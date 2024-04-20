@@ -51,4 +51,4 @@ return (
 
 This hook is actively used by our components (like `Grid`), but you can also use it in your own components!
 
-**Source:** [/src/hooks/media.ts#57](/src/hooks/media.ts)
+**Source:** [/src/hooks/media.ts#L57](/src/hooks/media.ts#L57)

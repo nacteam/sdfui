@@ -29,4 +29,4 @@ IS LG: true <-- actual screen size
 Is XL: false
 ```
 
-**Source:** [/src/hooks/media.ts#33](/src/hooks/media.ts)
+**Source:** [/src/hooks/media.ts#L33](/src/hooks/media.ts#L33)

@@ -12,4 +12,4 @@ return (
 );
 ```
 
-**Source:** [/src/hooks/media.ts#4](/src/hooks/media.ts)
+**Source:** [/src/hooks/media.ts#L4](/src/hooks/media.ts#L4)
