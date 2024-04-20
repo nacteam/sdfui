@@ -8,5 +8,12 @@ export default defineConfig({
     modules: {
       localsConvention: "camelCaseOnly"
     }
+  },
+  resolve: {
+    alias: {
+      "/@/core": "/src/core",
+      "/@/components": "/src/components",
+      "/@/hooks": "/src/hooks"
+    }
   }
 })
