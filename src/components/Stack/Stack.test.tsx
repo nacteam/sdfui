@@ -5,6 +5,6 @@ import Stack from "./Stack";
 
 describe("Stack", () => {
   test("renders the Stack component", () => {
-    render(<Stack />);
+    render(<Stack>1</Stack>);
   });
 });

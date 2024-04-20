@@ -1,2 +1,2 @@
 export { useAppearance } from "./themes";
-export { useMediaQuery, useMediaScreenSize } from "./media";
+export { useMediaQuery, useMediaScreenSize, useAdaptiveValue } from "./media";
