@@ -13,7 +13,6 @@ export interface StackProps {
 
 const Stack = (props: StackProps) => {
   const { direction, spacing } = props;
-  const screenSize = useMediaScreenSize();
 
   const directionValue = direction ? (
     useAdaptiveValue(direction, "column")
