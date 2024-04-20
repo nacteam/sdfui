@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AdaptiveValue } from "../core/types";
 
 export const useMediaQuery = (query: string) => {
     const [matches, setMatches] = useState(false);
@@ -38,4 +39,33 @@ export const useMediaScreenSize = () => {
     const isXl = useMediaQuery("(min-width: 1200px)");
     
     return { isXs, isSm, isMd, isLg, isXl };
+}
+
+const isAdaptiveValue = <T>(
+    value: AdaptiveValue<T>
+): value is Exclude<typeof value, T> => {
+    let valueUpcast = value as Exclude<typeof value, T>;
+    return (
+        valueUpcast.xs !== undefined ||
+        valueUpcast.sm !== undefined ||
+        valueUpcast.md !== undefined ||
+        valueUpcast.lg !== undefined ||
+        valueUpcast.xl !== undefined
+    );
+}
+
+export const useAdaptiveValue = <T, K>(
+    value: AdaptiveValue<T>,
+    defaultValue: K
+): T | K => {
+    const screenSize = useMediaScreenSize();
+    if (isAdaptiveValue(value)) {
+        if (screenSize.isXl && value.xl !== undefined) return value.xl;
+        if (screenSize.isLg && value.lg !== undefined) return value.lg;
+        if (screenSize.isMd && value.md !== undefined) return value.md;
+        if (screenSize.isSm && value.sm !== undefined) return value.sm;
+        return value.xs ?? defaultValue;
+    } else {
+        return value as T;
+    }
 }
