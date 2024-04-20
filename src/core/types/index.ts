@@ -1,1 +1,1 @@
-export { AdaptiveValue } from "./AdaptiveDesign";
+export * from "./AdaptiveDesign";

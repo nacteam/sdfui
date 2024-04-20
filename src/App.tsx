@@ -4,7 +4,7 @@ import TextField from "./components/TextField";
 // import { Button, ConfigProvider } from ;
 import { ThemeContext } from "./core/theme";
 import { useAppearance } from "./hooks/themes";
-import { useMediaScreenSize } from "./hooks/media";
+import { useAdaptiveValue, useMediaScreenSize } from "./hooks/media";
 
 function App() {
   const { appearance, setAppearance } = useAppearance();
@@ -27,6 +27,9 @@ function App() {
   </Icon>;
 
   let screenSize = useMediaScreenSize();
+  const aValue = { sm: "sm", md: "md", lg:"lg" };
+  // const aValue = "test";
+  const value = useAdaptiveValue(aValue, "default");
   return (
     <div className={`app ${appearance}`}>
       <span>
@@ -35,6 +38,7 @@ function App() {
         Is MD: {screenSize.isMd.toString()} <br />
         Is LG: {screenSize.isLg.toString()} <br />
         Is XL: {screenSize.isXl.toString()} <br />
+        Adaptive value: {value}
       </span>
       <TextField
         mode="filled"
