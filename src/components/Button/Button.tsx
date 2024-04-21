@@ -26,18 +26,28 @@ const Button = (props: ButtonProps) => {
     "label-text": classes.labelText
   }
 
-  const { variant, icon, ...restProps } = props;
+  const {
+    variant,
+    icon,
+    style: originalStyle,
+    className: originalClassName,
+    children,
+    ...cleanedProps
+  } = props;
 
   return (
     <button
       onClick={props.onClick}
-      className={`${styleClassNames[variant || "filled"]} ${appearance} ${icon ? classes.icon : ""}`}
-      {...restProps}
+      style={originalStyle}
+      className={
+        `${originalStyle || ""} ${styleClassNames[variant || "filled"]} ${appearance} ${icon ? classes.icon : ""}`
+      }
+      {...cleanedProps}
     >
       <div className={classes.container}>
         { icon }
         <div className={classes.labelText}>
-          { props.children }
+          { children }
         </div>
       </div>
       <Ripple />
