@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Stack.module.scss";
 import { AdaptiveValue } from "/@/core/types/AdaptiveDesign";
-import { useAdaptiveValue, useMediaScreenSize } from "/@/hooks/media";
+import { useAdaptiveValue } from "/@/hooks/media";
 
 type DirectionType = "row" | "column";
 export interface StackProps {
