@@ -194,6 +194,24 @@ html {
         --error-100: #ffffff;
     }
 
+    /* Shapes */
+    html {
+        --shape-none: 0;
+        --shape-extra-small: 4px;
+        --shape-small: 8px;
+        --shape-medium: 12px;
+        --shape-large: 16dp;
+        --shape-extra-large: 28px;
+        --shape-full: 100%;
+    }
+
+    /* Borders */
+    html {
+        --border-none: "none";
+        --border-outline: 1px solid var(--outline);
+        --border-outline-variant: 1px solid var(--outline-variant);
+    }
+    
     html:has(* > .light) {
         --inverse-primary: #cbbeff;
         --surface-variant: #e6e0ec;

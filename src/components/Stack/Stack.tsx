@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./Stack.module.scss";
 import { AdaptiveValue } from "/@/core/types/AdaptiveDesign";
-import { useAdaptiveValue, useMediaScreenSize } from "/@/hooks/media";
+import { useAdaptiveValue } from "/@/hooks/media";
 
 type DirectionType = "row" | "column";
-export interface StackProps {
+export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode,
   spacing?: AdaptiveValue<number>,
   direction?: AdaptiveValue<DirectionType>
@@ -12,7 +12,14 @@ export interface StackProps {
 }
 
 const Stack = (props: StackProps) => {
-  const { direction, spacing } = props;
+  const {
+    direction,
+    spacing,
+    style: originalStyle,
+    className: originalClassName,
+    children,
+    ...cleanedProps
+  } = props;
 
   const directionValue = direction ? (
     useAdaptiveValue(direction, "column")
@@ -25,12 +32,16 @@ const Stack = (props: StackProps) => {
     gap: spacingValue * 4
   };
   return (
-    <div style={styles} className={classes.stack}>
-      {React.Children.map(props.children, (child, index) => (
+    <div
+      style={{...originalStyle, ...styles}}
+      className={`${originalClassName || ""} ${classes.stack}`}
+      {...cleanedProps}
+    >
+      {React.Children.map(children, (child, index) => (
         <React.Fragment key={index}>
           {child}
           {
-            index !== React.Children.count(props.children) - 1 &&
+            index !== React.Children.count(children) - 1 &&
             props.divider
           }
         </React.Fragment>
