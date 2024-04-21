@@ -46,20 +46,20 @@ const Container = ({
   const paddingValue = useAdaptiveValue(padding, 2);
 
   const getOutline = (): string => {
-    if (!outline) return "none";
+    if (!outline) return classes.outlineNone;
     if (!variant.startsWith("surface-container")) {
       console.warn(
         "[design] Please do not use outline with primary, secondary, or tertiary variants. Use surface container variants instead."
       )
     }
-    if (outlineStyle === "outline") return "1px solid var(--outline)";
-    if (outlineStyle === "outline-variant") return "1px solid var(--outline-variant)";
+    if (outlineStyle === "outline") return classes.outline;
+    if (outlineStyle === "outline-variant") return classes.outlineVariant;
 
     // auto outline color detection
     return (
       React.Children.count(children) > 1 ?
-        "1px solid var(--outline-variant)" :
-        "1px solid var(--outline)"
+        classes.outlineVariant :
+        classes.outline
     );
   }
 
@@ -86,14 +86,13 @@ const Container = ({
 
   const styles = {
     margin: marginValue * 4,
-    padding: paddingValue * 4,
-    border: getOutline()
+    padding: paddingValue * 4
   };
   return (
     <div
       style={{...originalStyle, ...styles}}
       className={
-        `${originalClassName || ""} ${classes.container} ${variants[variant]} ${shapeStyles[shapeStyle]}`
+        `${originalClassName || ""} ${classes.container} ${variants[variant]} ${shapeStyles[shapeStyle]} ${getOutline()}`
       }
       {...cleanedProps}
     >

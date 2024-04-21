@@ -204,8 +204,14 @@ html {
         --shape-extra-large: 28px;
         --shape-full: 100%;
     }
-    
 
+    /* Borders */
+    html {
+        --border-none: "none";
+        --border-outline: 1px solid var(--outline);
+        --border-outline-variant: 1px solid var(--outline-variant);
+    }
+    
     html:has(* > .light) {
         --inverse-primary: #cbbeff;
         --surface-variant: #e6e0ec;

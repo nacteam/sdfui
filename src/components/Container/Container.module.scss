@@ -65,3 +65,15 @@
 .container.shape-full {
     border-radius: var(--shape-full);
 }
+
+.container.outline-none {
+    border: var(--border-none);
+}
+
+.container.outline {
+    border: var(--border-outline);
+}
+
+.container.outline-variant {
+    border: var(--border-outline-variant);
+}
