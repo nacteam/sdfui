@@ -34,7 +34,7 @@ const Stack = (props: StackProps) => {
   return (
     <div
       style={{...originalStyle, ...styles}}
-      className={`${originalClassName} ${classes.stack}`}
+      className={`${originalClassName || ""} ${classes.stack}`}
       {...cleanedProps}
     >
       {React.Children.map(children, (child, index) => (

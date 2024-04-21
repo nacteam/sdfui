@@ -20,7 +20,7 @@ type ShapeStyles = (
   "extra-large" |
   "full"
 );
-export interface ContainerProps {
+export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode,
   margin?: AdaptiveValue<number>,
   padding?: AdaptiveValue<number>,
@@ -37,7 +37,10 @@ const Container = ({
   outline = false,
   outlineStyle = "auto",
   shapeStyle = "medium",
-  ...otherProps
+  style: originalStyle,
+  className: originalClassName,
+  children,
+  ...cleanedProps
 }: ContainerProps) => {
   const marginValue = useAdaptiveValue(margin, 0);
   const paddingValue = useAdaptiveValue(padding, 2);
@@ -54,7 +57,7 @@ const Container = ({
 
     // auto outline color detection
     return (
-      React.Children.count(otherProps.children) > 1 ?
+      React.Children.count(children) > 1 ?
         "1px solid var(--outline-variant)" :
         "1px solid var(--outline)"
     );
@@ -88,12 +91,13 @@ const Container = ({
   };
   return (
     <div
-      style={styles}
+      style={{...originalStyle, ...styles}}
       className={
-        `${classes.container} ${variants[variant]} ${shapeStyles[shapeStyle]}`
+        `${originalClassName || ""} ${classes.container} ${variants[variant]} ${shapeStyles[shapeStyle]}`
       }
+      {...cleanedProps}
     >
-      {otherProps.children}
+      {children}
     </div>
   );
 };
