@@ -65,12 +65,6 @@ const Ripple = () => {
     <div onMouseDown={addRipple} className={classes.rippleContainer}>
       {rippleArray.length > 0 &&
         rippleArray.map((ripple, index) => {
-          console.log({
-            top: ripple.y,
-            left: ripple.x,
-            width: ripple.size,
-            height: ripple.size
-          })
           return (
             <span
               key={"ripple" + index}
