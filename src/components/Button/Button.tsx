@@ -1,6 +1,7 @@
 import React from "react";
 import { useAppearance } from "../../hooks/themes";
 import classes from "./Button.module.scss";
+import uiClasses from "/@/core/styles/ui.module.scss";
 import Ripple from "../Ripple";
 import { buildClassName } from "/@/core/util";
 
@@ -39,7 +40,7 @@ const Button = (props: ButtonProps) => {
     <button
       onClick={props.onClick}
       style={userDefinedStyle}
-      className={buildClassName(styleClassNames[variant || "filled"], appearance, icon && classes.icon, userDefinedClassName)}
+      className={buildClassName(styleClassNames[variant || "filled"], appearance, icon && classes.icon, uiClasses.translucentSurface, userDefinedClassName)}
       {...cleanedProps}
     >
       <div className={classes.container}>
