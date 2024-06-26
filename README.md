@@ -1,9 +1,9 @@
-# Superdef UI kit for React
+# Difhel UI Kit for React
 <p align="center">
 <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white" alt="TypeScript"/>
 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB" alt="React"/>
 </p>
-The official Superdef UI kit for React based on Material Design 3 components, written from scratch on React and Typescript.
+The official Difhel UI kit for React based on Material Design 3 components, written from scratch on React and Typescript.
 
 ## Supports
 - theming (light/dark) - auto detecting color scheme via `window.matchMedia` and providing hook `useAppearance` for getting/setting the theme
