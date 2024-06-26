@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import classes from "./Container.module.scss";
+import uiClasses from "/@/core/styles/ui.module.scss";
 import { AdaptiveValue } from "/@/core/types/AdaptiveDesign";
 import { useAdaptiveValue } from "/@/hooks/media";
 import { buildClassName } from "/@/core/util";
@@ -99,6 +100,7 @@ const Container = ({
           variants[variant],
           shapeStyles[shapeStyle],
           getOutline(),
+          uiClasses.translucentSurface,
           userDefinedClassName
         )
       }

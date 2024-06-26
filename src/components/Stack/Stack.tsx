@@ -1,7 +1,9 @@
 import React from "react";
 import classes from "./Stack.module.scss";
+import uiClasses from "/@/core/styles/ui.module.scss";
 import { AdaptiveValue } from "/@/core/types/AdaptiveDesign";
 import { useAdaptiveValue } from "/@/hooks/media";
+import { buildClassName } from "/@/core/util";
 
 type DirectionType = "row" | "column";
 export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -15,8 +17,8 @@ const Stack = (props: StackProps) => {
   const {
     direction,
     spacing,
-    style: originalStyle,
-    className: originalClassName,
+    style: userDefinedStyle,
+    className: userDefinedClassName,
     children,
     ...cleanedProps
   } = props;
@@ -33,8 +35,8 @@ const Stack = (props: StackProps) => {
   };
   return (
     <div
-      style={{...originalStyle, ...styles}}
-      className={`${originalClassName || ""} ${classes.stack}`}
+      style={{...styles, ...userDefinedStyle}}
+      className={buildClassName(classes.stack, uiClasses.translucentSurface, userDefinedClassName)}
       {...cleanedProps}
     >
       {React.Children.map(children, (child, index) => (
