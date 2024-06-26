@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import classes from "./Container.module.scss";
 import { AdaptiveValue } from "/@/core/types/AdaptiveDesign";
 import { useAdaptiveValue } from "/@/hooks/media";
@@ -45,7 +45,7 @@ const Container = ({
   const marginValue = useAdaptiveValue(margin, 0);
   const paddingValue = useAdaptiveValue(padding, 2);
 
-  const getOutline = (): string => {
+  const getOutline = useCallback((): string => {
     if (!outline) return classes.outlineNone;
     if (!variant.startsWith("surface-container")) {
       console.warn(
@@ -61,7 +61,7 @@ const Container = ({
         classes.outlineVariant :
         classes.outline
     );
-  }
+  }, []);
 
   const variants = {
     primary: classes.primary,
