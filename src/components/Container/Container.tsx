@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useCallback } from "react";
 import classes from "./Container.module.scss";
 import { AdaptiveValue } from "/@/core/types/AdaptiveDesign";
 import { useAdaptiveValue } from "/@/hooks/media";
+import { buildClassName } from "/@/core/util";
 
 type EmphasisVariants = (
   "surface-container-lowest" |
@@ -37,15 +38,15 @@ const Container = ({
   outline = false,
   outlineStyle = "auto",
   shapeStyle = "medium",
-  style: originalStyle,
-  className: originalClassName,
+  style: userDefinedStyle,
+  className: userDefinedClassName,
   children,
   ...cleanedProps
 }: ContainerProps) => {
   const marginValue = useAdaptiveValue(margin, 0);
   const paddingValue = useAdaptiveValue(padding, 2);
 
-  const getOutline = (): string => {
+  const getOutline = useCallback((): string => {
     if (!outline) return classes.outlineNone;
     if (!variant.startsWith("surface-container")) {
       console.warn(
@@ -61,7 +62,7 @@ const Container = ({
         classes.outlineVariant :
         classes.outline
     );
-  }
+  }, []);
 
   const variants = {
     primary: classes.primary,
@@ -88,11 +89,18 @@ const Container = ({
     margin: marginValue * 4,
     padding: paddingValue * 4
   };
+
   return (
     <div
-      style={{...originalStyle, ...styles}}
+      style={{...styles, ...userDefinedStyle}}
       className={
-        `${originalClassName || ""} ${classes.container} ${variants[variant]} ${shapeStyles[shapeStyle]} ${getOutline()}`
+        buildClassName(
+          classes.container,
+          variants[variant],
+          shapeStyles[shapeStyle],
+          getOutline(),
+          userDefinedClassName
+        )
       }
       {...cleanedProps}
     >

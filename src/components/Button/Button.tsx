@@ -2,6 +2,7 @@ import React from "react";
 import { useAppearance } from "../../hooks/themes";
 import classes from "./Button.module.scss";
 import Ripple from "../Ripple";
+import { buildClassName } from "/@/core/util";
 
 export interface ButtonProps extends Omit<
   React.DetailedHTMLProps<
@@ -29,19 +30,16 @@ const Button = (props: ButtonProps) => {
   const {
     variant,
     icon,
-    style: originalStyle,
-    className: originalClassName,
+    style: userDefinedStyle,
+    className: userDefinedClassName,
     children,
     ...cleanedProps
   } = props;
-
   return (
     <button
       onClick={props.onClick}
-      style={originalStyle}
-      className={
-        `${originalStyle || ""} ${styleClassNames[variant || "filled"]} ${appearance} ${icon ? classes.icon : ""}`
-      }
+      style={userDefinedStyle}
+      className={buildClassName(styleClassNames[variant || "filled"], appearance, icon && classes.icon, userDefinedClassName)}
       {...cleanedProps}
     >
       <div className={classes.container}>
