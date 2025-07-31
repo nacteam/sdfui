@@ -1,13 +1,14 @@
 {
   "name": "@nacteam/sdfui",
-  "version": "0.0.7-patch1",
+  "version": "0.0.8",
   "description": "Superdef UI kit for React based on Material Design 3",
   "type": "module",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
     "dev": "vite",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "make-release": "npm run rollup && version=$(node -p \"require('./package.json').version\") && git add . && git commit --allow-empty --no-verify -am \"Release v$version\" && git push origin main && (npm publish || true) && (git tag -d v$version || true) && git tag v$version && git push origin v$version"
   },
   "author": "Mark Fomin",
   "license": "CC BY-NC-SA 4.0",
