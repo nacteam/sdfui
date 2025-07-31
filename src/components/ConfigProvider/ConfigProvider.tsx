@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ThemeContext } from "../../core/theme";
 import { getSystemTheme } from "../../core/theme/ThemeContext";
-import "./ConfigProvider.scss";
 
 export interface ConfigProviderProps {
   children?: React.ReactNode;

@@ -22,7 +22,7 @@ type ShapeStyles = (
   "extra-large" |
   "full"
 );
-export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ContainerProps extends Pick<React.HTMLAttributes<HTMLDivElement>, "style" | "className">{
   children?: React.ReactNode,
   margin?: AdaptiveValue<number>,
   padding?: AdaptiveValue<number>,

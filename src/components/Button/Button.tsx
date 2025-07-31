@@ -5,16 +5,17 @@ import uiClasses from "/@/core/styles/ui.module.scss";
 import Ripple from "../Ripple";
 import { buildClassName } from "/@/core/util";
 
-export interface ButtonProps extends Omit<
-  React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  >,
-  "variant"
-> {
+type ButtonReact = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>;
+
+
+export type ButtonProps = {
   variant?: "elevated" | "filled" | "filled-tonal" | "outlined" | "text";
   icon?: React.ReactNode;
-}
+} & Pick<ButtonReact, "style" | "className" | "children" | "onClick"> & Record<string, unknown>;
+
 
 const Button = (props: ButtonProps) => {
   const { appearance } = useAppearance();
