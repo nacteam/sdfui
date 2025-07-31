@@ -1,6 +1,6 @@
 {
   "name": "@nacteam/sdfui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Superdef UI kit for React based on Material Design 3",
   "type": "module",
   "scripts": {
